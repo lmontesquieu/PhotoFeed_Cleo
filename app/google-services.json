@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "954425426660",
+    "firebase_url": "https://cleophotofeed.firebaseio.com",
+    "project_id": "cleophotofeed",
+    "storage_bucket": "cleophotofeed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954425426660:android:1ba07372df222fbb",
+        "android_client_info": {
+          "package_name": "net.cleonet.cleo.photofeed_galileo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954425426660-422oqvlplmcfm7tatkn8477e5eu4no68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgdJCexko90gLWMGRrsT_Mu2_-d6bkhng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
