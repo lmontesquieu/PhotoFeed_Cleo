@@ -1,4 +1,4 @@
-package net.cleonet.cleo.photofeed_galileo.photolist;
+package net.cleonet.cleo.photofeed_galileo.photolist.ui;
 
 import net.cleonet.cleo.photofeed_galileo.entities.Photo;
 

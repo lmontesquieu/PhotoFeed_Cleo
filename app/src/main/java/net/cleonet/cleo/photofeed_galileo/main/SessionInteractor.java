@@ -5,4 +5,5 @@ package net.cleonet.cleo.photofeed_galileo.main;
  */
 
 public interface SessionInteractor {
+    void logout();
 }

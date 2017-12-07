@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:2.0.0-beta5'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.google.gms:google-services:3.1.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 23
+    //buildToolsVersion = "23.0.2"
+    //buildToolsVersion = "23.1.1"
+    buildToolsVersion = "26.0.2"
+    minSdkVersion = 16
+    targetSdkVersion = 23
+
+
+    supportLibraryVersion = '23.1.1'
+    //Mac OS, check available versions.
+    //Go to /Users/Pepe/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-location
+    //Used 9.6.1 as per error message stating that 9.6.1 version was already being used and shouldn't be mixed.
+    //Otherwise getting Runtime error when using different versions.
+    //playServicesLocationVersion = '9.6.1'
+    //playServicesLocationVersion = '10.0.1'
+    playServicesLocationVersion = '11.0.4'
+    circleImageViewVersion = '2.0.0'
+    //firebaseClientVersion = '9.6.1'
+    //firebaseClientVersion = '10.0.1'
+    firebaseClientVersion = '11.0.4'
+    //butterknifeVersion = '7.0.1'
+    butterknifeVersion = '8.0.1'
+    cloudinaryVersion = '1.1.2'
+    eventbusVersion = '3.0.0'
+    daggerVersion = '2.0.1'
+    glideVersion = '3.6.1'
+    jsr250Version = '1.0'
+}

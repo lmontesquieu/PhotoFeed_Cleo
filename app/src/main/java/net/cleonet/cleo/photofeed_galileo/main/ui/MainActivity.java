@@ -34,11 +34,11 @@ import com.google.android.gms.location.LocationServices;
 
 import net.cleonet.cleo.photofeed_galileo.PhotoFeedApp;
 import net.cleonet.cleo.photofeed_galileo.photolist.ui.PhotoListFragment;
-import net.cleonet.cleo.photofeed_galileo.PhotoMapFragment;
 import net.cleonet.cleo.photofeed_galileo.R;
 import net.cleonet.cleo.photofeed_galileo.login.ui.LoginActivity;
 import net.cleonet.cleo.photofeed_galileo.main.MainPresenter;
 import net.cleonet.cleo.photofeed_galileo.main.ui.adapters.MainSectionsPagerAdapter;
+import net.cleonet.cleo.photofeed_galileo.photomap.ui.PhotoMapFragment;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    android {
+        defaultConfig {
+            multiDexEnabled true
+        }
+    }
+
+    defaultConfig {
+        applicationId "net.cleonet.cleo.photofeed_galileo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "CLOUDINARY_URL", project.property("CLOUDINARY_URL")
+            resValue "string", "GOOGLE_MAPS_API_KEY", project.property("GOOGLE_MAPS_API_KEY");
+        }
+
+        debug {
+            resValue "string", "CLOUDINARY_URL", project.property("CLOUDINARY_URL")
+            resValue "string", "GOOGLE_MAPS_API_KEY", project.property("GOOGLE_MAPS_API_KEY");
+        }
+    }
+    //buildToolsVersion '25.0.0'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    //compile "com.firebase:firebase-client-android:$rootProject.ext.firebaseClientVersion"
+    //compile 'com.android.support:design:24.2.1'
+    //compile 'com.android.support:support-v4:24.2.1'
+
+    //apt "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+    compile "javax.annotation:jsr250-api:$rootProject.ext.jsr250Version"
+    //compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+
+    //compile 'com.google.dagger:dagger:2.0'
+    //annotationProcessor 'com.google.dagger:dagger-compiler:2.0'
+    compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+
+    compile "com.google.firebase:firebase-core:$rootProject.ext.firebaseClientVersion"
+    compile "com.google.firebase:firebase-database:$rootProject.ext.firebaseClientVersion"
+    compile "com.google.firebase:firebase-auth:$rootProject.ext.firebaseClientVersion"
+    //compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    compile "org.greenrobot:eventbus:$rootProject.ext.eventbusVersion"
+    compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    compile "de.hdodenhof:circleimageview:$rootProject.ext.circleImageViewVersion"
+
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+
+    compile "com.cloudinary:cloudinary-android:$rootProject.ext.cloudinaryVersion"
+    //compile "com.google.android.gms:play-services-location:$rootProject.ext.playServicesLocationVersion"
+    compile "com.google.android.gms:play-services-location:$rootProject.ext.playServicesLocationVersion"
+
+    compile ("com.google.android.gms:play-services-base:11.0.4") {
+        force = true;
+    }
+    compile ("com.google.android.gms:play-services-maps:11.0.4") {
+        force = true;
+    }
+    compile ("com.google.android.gms:play-services-gcm:11.0.4") {
+        force = true;
+    }
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'com.google.gms.google-services'
